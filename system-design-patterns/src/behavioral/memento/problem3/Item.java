@@ -1,17 +1,11 @@
-package behavioral.memento.problem2;
-
-import behavioral.memento.problem3.Item;
+package behavioral.memento.problem3;
 
 import java.util.Objects;
 
-/**
- * Shape class represents the objects we will draw on the canvas.
- */
-
-public class Shape {
+public class Item {
     private String name;
 
-    public Shape(String name) {
+    public Item(String name) {
         this.name = name;
     }
 
@@ -29,8 +23,8 @@ public class Shape {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Shape shape = (Shape) o;
-        return Objects.equals(name, shape.name); // Compare by name
+        Item item = (Item) o;
+        return Objects.equals(name, item.name); // Compare by name
     }
 
     // Override hashCode() to match the equals() contract
