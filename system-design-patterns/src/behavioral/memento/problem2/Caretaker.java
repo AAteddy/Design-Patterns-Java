@@ -14,9 +14,10 @@ public class Caretaker {
     }
 
     public void undo(Canvas canvas) {
-        if(history.isEmpty()) {
+        if(!history.isEmpty()) {
            CanvasState state = history.pop();
            canvas.restore(state);
-        }
+        } else
+            System.out.println("No states to undo");
     }
 }
