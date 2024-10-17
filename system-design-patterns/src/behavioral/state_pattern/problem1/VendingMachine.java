@@ -12,18 +12,6 @@ public class VendingMachine {
         this.currentState = new IdleState(); // initial state
     }
 
-    public void setCurrentState(VendingMachineState state) {
-        this.currentState = state;
-    }
-
-    public int getProductCount() {
-        return productCount;
-    }
-
-    public void setProductCount(int productCount) {
-        this.productCount = productCount;
-    }
-
     public void insertMoney() {
         currentState.insertMoney(this);
     }
@@ -34,6 +22,18 @@ public class VendingMachine {
 
     public void dispenseProduct() {
         currentState.dispenseProduct(this);
+    }
+
+    public void setCurrentState(VendingMachineState state) {
+        this.currentState = state;
+    }
+
+    public int getProductCount() {
+        return productCount;
+    }
+
+    public void setProductCount(int productCount) {
+        this.productCount = productCount;
     }
 }
 
